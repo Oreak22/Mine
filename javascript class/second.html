@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>count</title>
+    <script>
+        function count(){
+            var seconds = s.value;
+            if (seconds > 0) {
+                seconds--;
+                s.value = seconds;
+                
+            }
+
+            else
+            {
+                var min = mi.value;
+                if (min > 0) 
+                { 
+                    s.value=60;
+                    min--;
+                    mi.value = min;
+                }
+               else
+               var hour = h.value;
+               if (hour > 0) { 
+                   mi.value = 60;
+                   hour--;
+                   h.value = hour;
+                   
+               }
+             }
+
+               
+        if (h.value >= 0 && mi.value >= 0  && s.value >= 0) {
+            setTimeout("count()",1000);
+        }
+        }
+       
+    </script>
+</head>
+<body>
+    <table align="center" border="1">
+        <tr><td align="center" colspan="3"> Count Down</td></tr>
+        <tr>
+            <td align="center"> <input type="text" placeholder="hh" id="h"></td>
+            <td align="center"> <input type="text" placeholder="mm" id="mi"></td>
+            <td align="center"> <input type="text" placeholder="ss" id="s" style="justify-items: center;" ></td>
+        </tr>
+        <tr><td align="center" colspan="3"> <button onclick="count()">Start</button></td></tr>
+    </table>
+</body>
+</html>

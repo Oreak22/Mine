@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function gen(){
+            ih = "<tr>";
+            for(r=1; r<=n.value; r++){
+                ih += "<td>"  +r + " Times";
+                ih += "<table border=1>";
+                // var staa = s.value
+                for(i=0 + s.value; i<=l.value; i++){
+                    result = i * r;
+                    ih += "<tr><td>" + r + " X " + i + " = " + result + "</td></tr>";
+                }
+                ih += "</table>"
+                ih += "</td>"
+            }
+            ih += "</tr>";
+            mtable.innerHTML = ih;
+        }
+    </script>
+</head>
+<body>
+  <table align="center" border="1">
+      <tr><td align="center" colspan="2">Multiplication </td></tr>
+      <tr>
+          <td colspan="2" align="center">Number of Times<input type="text" id="n"></td>
+      </tr>
+      <tr > <td colspan="2" align="center">Number of Leights<input type="text" id="l"></td></tr>
+      <tr > <td colspan="2" align="center">Start Number<input type="text" id="s"></td></tr>
+      <tr><td align="center" colspan="2"><button onclick="gen()">Generate</button></td></tr>
+  </table>
+  <table border="1" align="center" id="mtable"></table>
+</body>
+</html>

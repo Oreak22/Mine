@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script >
+       var sit= [];
+       function coun(){
+           if (P.value=="") {
+               sit.push(I.value)
+               ss = sit.length;
+               ss--;
+               alert(I.value + " has been assigned to " + ss)
+           }else{
+               if (sit[P.value]== undefined) {
+                   sit[P.value] = I.value;
+               }
+               else{
+                   ss++;
+                   n = ss;
+                   sit[n] = I.value
+                   alert("This seat has been taken by " + sit[P.value] + " you have been assigned to seat " + ss)
+               }
+           }
+       }
+       function dis(){
+           alert(sit[O.value])
+       }
+    </script>
+</head>
+<body>
+    <table align="center" border="solid">
+        <tr align="center" > <td colspan="3">BOOK A SEAT</td></tr>
+        <tr align="center">
+            <td > <input type="text" placeholder="Input Name" id="I"></td>
+            <td ><input type="text" placeholder="prefered seat number" id="P"></td>
+            <td ><input type="text" placeholder="Occupant name" id="O"></td>
+        </tr>
+        <tr align="center">
+           <td align="center" colspan="2"><button onclick="coun()"> Book sit</button></td>
+           <td align="center" ><button onclick="dis()"> Occupant</button></td>
+        </tr>
+    </table>
+</body>
+</html>
